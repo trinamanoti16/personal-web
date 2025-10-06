@@ -1,0 +1,281 @@
+:root {
+            --primary-bg: #f5e6d3;
+            --secondary-bg: #ffffff;
+            --accent-yellow: #f4d03f;
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+        }
+        
+        /* Navigation */
+        .navbar {
+            padding: 1.5rem 0;
+            background: transparent;
+        }
+        
+        .navbar-brand {
+            font-weight: 600;
+            color: var(--text-dark) !important;
+        }
+        
+        .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            margin-left: 2rem;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--text-dark) !important;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-yellow);
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: var(--primary-bg);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 4rem 0;
+        }
+        
+        .hero-content h1 {
+            font-size: 4rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-content h1 .highlight {
+            background: var(--accent-yellow);
+            padding: 0 10px;
+        }
+        
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 500px;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .btn-custom {
+            background: var(--text-dark);
+            color: white;
+            padding: 15px 40px;
+            border: 3px solid var(--text-dark);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .btn-custom:hover {
+            background: transparent;
+            color: var(--text-dark);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            writing-mode: vertical-rl;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .scroll-indicator::before {
+            content: '';
+            width: 2px;
+            height: 80px;
+            background: var(--text-dark);
+            display: block;
+            margin: 0 auto 10px;
+        }
+        
+        /* Project Section */
+        .project-section {
+            padding: 6rem 0;
+        }
+        
+        .section-label {
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        .project-title {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            padding: 8px 20px;
+            border: 2px solid var(--text-dark);
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .project-description {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+        }
+        
+        .project-image {
+            position: relative;
+            padding: 2rem;
+        }
+        
+        .project-image img {
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        
+        .decorative-dots {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-image: radial-gradient(circle, var(--text-light) 2px, transparent 2px);
+            background-size: 15px 15px;
+            opacity: 0.3;
+        }
+        
+        .project-arrow {
+            text-align: right;
+            margin-top: 2rem;
+        }
+        
+        .project-arrow i {
+            font-size: 2rem;
+            color: var(--text-light);
+        }
+        
+        /* What I Do Section */
+        .services-section {
+            padding: 6rem 0;
+            background: var(--secondary-bg);
+        }
+        
+        .services-title {
+            font-size: 3.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .services-title .highlight {
+            background: var(--accent-yellow);
+            padding: 0 10px;
+        }
+        
+        .service-item h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-item p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 6rem 0;
+            background: var(--primary-bg);
+        }
+        
+        .contact-title {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-title .highlight {
+            background: var(--accent-yellow);
+            padding: 0 10px;
+        }
+        
+        .contact-text {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .email-link {
+            color: var(--text-dark);
+            font-weight: 600;
+            text-decoration: underline;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 3rem 0;
+            background: var(--secondary-bg);
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .project-title,
+            .services-title,
+            .contact-title {
+                font-size: 2.5rem;
+            }
+            
+            .scroll-indicator {
+                display: none;
+            }
+            
+            .nav-link {
+                margin-left: 0;
+                margin-bottom: 1rem;
+            }
+        }
